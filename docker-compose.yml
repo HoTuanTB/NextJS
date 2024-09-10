@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: frontend
+    image: node:22-alpine
+    command: sh -c "npm run dev"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
